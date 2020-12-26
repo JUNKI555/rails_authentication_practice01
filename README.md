@@ -3,7 +3,7 @@
 
 ## Rails README
 - Ruby version
- - 2.6.6
+  - 2.6.6
 - Database
   - MySQL
 - Database creation
