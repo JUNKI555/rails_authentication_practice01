@@ -1,27 +1,31 @@
 # frozen_string_literal: true
 
 class Users::SessionsController < Devise::SessionsController
-  # before_action :configure_sign_in_params, only: [:create]
+  before_action :configure_sign_in_params, only: [:create]
 
-  # GET /resource/sign_in
-  # def new
-  #   super
-  # end
+  # GET /users/sign_in
+  def new
+    super
 
-  # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+    puts '========================='
+    puts 'GET /resource/sign_in'
+    puts '========================='
+  end
 
-  # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  # POST /users/sign_in
+  def create
+    super
+  end
 
-  # protected
+  # DELETE /users/sign_out
+  def destroy
+    super
+  end
 
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_in_params
-  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
-  # end
+  protected
+
+  # 許可するための追加のパラメータがある場合は、sanitizer に追加してください
+  def configure_sign_in_params
+    devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
+  end
 end
