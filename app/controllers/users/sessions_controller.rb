@@ -17,7 +17,8 @@ class Users::SessionsController < Devise::SessionsController
     super
   end
 
-  # DELETE /users/sign_out
+  # GET /users/sign_out
+  # ここは config/initializers/devise.rb で config.sign_out_via = :get としているので DELETE ではなく GET
   def destroy
     super
   end
