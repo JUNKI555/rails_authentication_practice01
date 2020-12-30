@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "cleancss": "rimraf ./public/packs/css/",
-    "postcss": "postcss ./app/assets/stylesheets/**/*.css -d ./public/packs/css/"
+    "postcss": "postcss ./app/assets/stylesheets/**/*.css -d ./public/packs/css/",
+    "output_manifest": "node output_manifest_js.js public"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.4",
